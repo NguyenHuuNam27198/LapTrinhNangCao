@@ -1,0 +1,203 @@
+body{
+    font-family: 'Baloo Thambi 2', cursive;
+    line-height: 27px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-size: 14px;
+    color: #1c1c1c;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden !important;
+}
+p{
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+#wrapper{
+    width: 100%;
+}
+
+
+
+
+/*--------------------------------------------------body-------------------------------------------------------------------------*/
+
+#body {
+    width: 90%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+div#body-left {
+    width: 50%;
+    margin-top: 60px;
+}
+
+div#body-right {
+    width: 50%;
+    background-color: #e9eaea8c;
+    border-left: 1px solid #b3b3b3d9;
+}
+
+#next-text {
+    text-transform: capitalize;
+    color: #888787e8;
+    padding-left: 8px;
+}
+
+#current-text {
+    text-transform: capitalize;
+    color: black;
+}
+
+div#profile-user {
+    width: 90%;
+}
+
+div#top-profile {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.input {
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+div#validate-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+#select-box {
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-left: 10px;  
+}
+
+#from-profile {
+    width: 95%;
+}
+
+#user-name {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+#user-add {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+div#body-botton {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    margin-top: 15px;
+    border-bottom: 1px solid #949494;
+}
+
+button.btn-pay {
+    width: 240px;
+    height: 60px;
+    text-align: center;
+    border: none;
+    color: white;
+    background-color: #0767bb;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+button.btn-pay:hover {
+    background-color: #044073;
+}
+
+div#container-right {
+    width: 70%;
+    margin-top: 85px;
+    margin-left: 7%;
+}
+
+div#top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #b5b4b4;
+}
+
+div#discount-code {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 20px;
+   border-bottom: 1px solid #b5b4b4;
+}
+
+div#product {
+    display: flex;
+    align-items: center;
+}
+
+img#img-product {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #cecece;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+button#button-discount {
+    width: 100px;
+    height: 45px;
+    border: none;
+    background-color: #b7b4b4;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+button#button-discount:hover {
+    background-color: #0277ca;
+}
+
+div#total-money {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #b5b4b4;
+}
+
+div#bot-content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.validate {
+    width: 220px;
+    height: 30px;
+    margin-bottom: 20px;
+    color: red;
+}
+/*--------------------------------------------------end-body-------------------------------------------------------------------------*/
