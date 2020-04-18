@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
+	<link rel="stylesheet"  type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/payment.css">
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+	<script>
+	$(document).ready(function(){
+   		$('#submit').click(function(){
+
+   			var e = $("#email").val()
+			if (e == "") 
+				$("#noti-input-name").css('display','block');	
+			else
+				$("#noti-input-name").css('display','none');
+
+			var h = $("#123").val()
+			if (h == "")
+				$("#456").css('display','block');
+			else				
+				$("#456").css('display','none');
+
+			var b = $("#name-first").val()
+			if (b == "")
+				$("#input-name").css('display','block');
+			else				
+				$("#input-name").css('display','none');
+
+			var c = $("#add").val()
+			if (c == "")
+				$("#input-add").css('display','block');
+			else				
+				$("#input-add").css('display','none');
+
+			var c = $("#city").val()
+			if (c == "")
+				$("#input-city").css('display','block');
+			else				
+				$("#input-city").css('display','none');
+
+			var d = $("#postal").val()
+			if (d == "")
+				$("#input-postal").css('display','block');
+			else				
+				$("#input-postal").css('display','none');
+
+			// var f = $("#phone").val()
+			// if (f == "")
+			// 	$("#input-phone").css('display','block');
+			// else				
+			// 	$("#input-phone").css('display','none');
+
+			// if(IsEmail(email)==false){
+   //              $("#input-email").css('display','block');	
+   //          }
+
+            if(validatePhone(phone)==false)
+            	$("#input-phone1").css('display','block');
+   		})
+
+		//  function IsEmail(email) {
+		//   var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		//   if(!regex.test(email)) {
+		//     return false;
+		//   }else{
+		//     return true;
+		//   }
+		// }
+
+		function validatePhone(phone) {
+		    var a = $("#phone").val()
+		    var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+		    if (filter.test(a)) {
+		        return true;
+		    }
+		    else {
+		        return false;
+		    }
+		}
+	});	
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="body">
+			<div id="body-left">
+				<div id="top-body-left">
+					<h2 id="title-1">Mountain Watch</h2>
+					<p id="current-text">Giỏ hàng <span style="padding-left: 8px;">>></span><span id="next-text"> Thanh toán</span> </p>
+				</div>
+				<div id="profile-user">
+					<div id="top-profile">
+						<p>Thông tin liên hệ</p>
+						<p> Already have an account?<a href="#"> Log in </a></p>
+					</div>
+					<div>
+						<input style="width: 100%; height: 45px;" class="input" type="email" name="email" id="email" placeholder="Email">
+						<span id="noti-input-name"  class="validate"style="display: none;">Bạn chưa nhập mail</span>
+						<span id="input-email"  class="validate"style="display: none;">Vui lòng nhập đúng định dạng mail</span>
+					</div>
+					<div>
+						<input type="checkbox"  name="vehicle1" value="">
+  						<label style="margin-left: 10px; font-weight: normal;"> Tôi muốn nhận những thông tin và ưu đãi mới nhất từ Mountain</label><br>
+					</div>
+				</div>
+				<div id="from-profile">
+					<p>Địa chỉ nhận hàng </p>
+					<form id="from" name="from" action="#">
+						<div id="user-name">
+							<input style="width: 45%; height: 45px;" class="input" type="text" name="first-name" id="123" placeholder="Họ">
+							<input style="width: 48%; height: 45px;" class="input" type="text" name="user-name" id="name-first" placeholder="Tên">
+						</div>
+						<div id="validate-name">
+							<span id="456" style="display: none;" class="validate">Bạn chưa nhập họ</span>
+							<span id="input-name" style="display: none;" class="validate">Bạn chưa nhập tên</span>
+						</div>
+						<div style="width: 95%;">
+							<input style="width: 100%; height: 45px;" class="input" type="text" name="add" id="add" placeholder="Đại chỉ">
+							<span id="input-add"  class="validate" style="display: none;" class="validate">Bạn chưa nhập địa chỉ</span>
+							<input style="width: 100%; height: 45px;" class="input" type="text" name="city" id="city" placeholder="Thành phố">
+							<span id="input-city" style="display: none;" class="validate">Bạn chưa nhập thành phố</span>
+						</div>
+						<div id="user-add">
+							<select style="width: 45%; height: 45px;" id="select-box">
+								<option>VietNam</option>
+							</select>
+							<input style="width: 48%; height: 45px;" class="input" type="text" name="Postal-code" id="postal" placeholder="Mã bưu chính (hãy nhập 1000)">
+						</div>
+						<div id="validate-name">
+							<span id="input-nation" style="display: none;" class="validate">Bạn chưa chọn quốc gia</span>
+							<span id="input-postal" style="display: none;" class="validate">Bạn chưa nhập mã bưu chính</span>
+						</div>
+						<div style="width: 95%;">
+							<input style="width: 100%; height: 45px;" class="input" type="text" name="phone" id="phone" placeholder="Điện thoại">
+							<span id="input-phone" style="display: none;" class="validate">Bạn chưa nhập số điện thoại</span>
+							<span id="input-phone1" style="display: none;" class="validate">Vui lòng nhập số điện thoại hợp lệ</span>
+						</div>
+						<div>
+						<input type="checkbox" name="vehicle1" value="">
+  						<label style="margin-left: 10px;  font-weight: normal;"> Lưu thông tin này cho lần sau </label><br>
+					</div>
+				<!-- 	<button class="btn-pay" id="submit">Thanh toán</button>	 -->
+					</form>
+				</div>
+
+				<div id="body-botton">
+					<button class="btn-pay" id="submit">Thanh toán</button>				
+				</div>
+			</div>
+			<div id="body-right">
+				<div id="container-right">
+					<div id="content-right">
+						<div id="top-content">
+							<div id="product">
+								<img id="img-product" src="E:/LapTrinhNangCao/LapTrinhNangCao/Project_last_season\image\sp1.jpg">
+								<p style="font-weight: bold;">ALEXEI</p>
+							</div>
+							<p class="price" style="font-weight: bold;">2,299,000đ</p>
+						</div>
+						<div id="discount-code">
+							<input style="width: 70%; height: 45px;" class="input" type="text" name="discount" placeholder="Mã giảm giá">
+							<button id="button-discount" type="button">Áp dụng</button>
+						</div>
+						<div id="total-money">
+							<div>
+								<p>
+									Tổng cộng
+								</p>
+								<p>
+									Phí vận chuyển
+								</p>
+							</div>
+							<div>
+								<p style="font-weight: bold;">
+									2,299,000đ
+								</p>
+								<p>
+									299,000đ
+								</p>
+							</div>
+						</div>
+						<div id="bot-content">
+							<p style="font-size: 1.14286em; color: #323232;">
+								Tổng
+							</p>
+							<p  style="font-weight: 500; font-size:1.71429em; color: #323232;">
+								2,299,000đ
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
